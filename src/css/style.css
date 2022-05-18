@@ -585,6 +585,7 @@ footer>ul>li>a {
     .box-items {
         height: 150px;
         overflow: auto;
+        justify-content: flex-start;
     }
 
     .items {
@@ -1209,7 +1210,6 @@ footer>ul>li>a {
         padding:0 10px;
     }
     
-
 }
 /* pc */
 @media only screen and (min-width:1025px){
