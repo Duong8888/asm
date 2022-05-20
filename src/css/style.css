@@ -9,7 +9,7 @@
     background: #FFFFFF;
     margin: auto;
     font-family: 'Inter', sans-serif;
-    height: 3566px;
+    height: auto;
 }
 
 header {
@@ -55,15 +55,17 @@ header {
     border: 1px solid #F54748;
 }
 
-.sign-in {
-    background-color: #FFFFFF;
+
+.sign-in{background-color: #fff;}
+.sign-in>a{
+    text-decoration: none;
     color: #F54748;
     font-weight: 600;
     font-size: 14px;
 }
-
-.sign-up {
-    background-color: #F54748;
+.sign-up{background-color: #F54748;}
+.sign-up>a{
+    text-decoration: none;
     color: #FFFFFF;
     font-weight: 600;
     font-size: 14px;
@@ -684,12 +686,13 @@ footer>ul>li>a {
         padding: 10px;
     }
 
-    #check:checked ~ .menu-mobile-tablet>ul {
+    #check:checked~.menu-mobile-tablet>ul {
         transform: translateX(0);
         z-index: 10;
         position: fixed;
     }
-    #check:checked ~ label>.overlay {
+
+    #check:checked~label>.overlay {
         position: fixed;
         left: 0;
         right: 0;
@@ -706,7 +709,7 @@ footer>ul>li>a {
         list-style: none;
     }
 
-    ul>.bx-x{
+    ul>.bx-x {
         font-size: 40px;
         color: #F54748;
         display: block;
@@ -772,26 +775,31 @@ footer>ul>li>a {
         width: 100%;
         height: 60%;
     }
-    .box-parent{
+
+    .box-parent {
         width: 100%;
         height: 95%;
         padding: 30px;
         margin-top: 20px;
     }
-    .box-parent img{
+
+    .box-parent img {
         width: 400px;
     }
 
-    .title-product{
+    .title-product {
         width: 100%;
     }
-    .title-product p{
+
+    .title-product p {
         width: 80%;
     }
-    .box-product{
+
+    .box-product {
         width: 50%;
     }
-    footer{
+
+    footer {
         margin-bottom: 40px;
     }
 }
@@ -802,7 +810,8 @@ footer>ul>li>a {
         width: 1200px;
         height: auto;
     }
-    footer{
+
+    footer {
         margin-bottom: 40px;
     }
 }
@@ -819,15 +828,19 @@ footer>ul>li>a {
 .product-detail img {
     height: 100%;
 }
-.product-detail-left{
+
+.product-detail-left {
     width: 50%;
 }
-.product-detail-right{
+
+.product-detail-right {
     width: 50%;
 }
-.product-detail-right img{
+
+.product-detail-right img {
     width: 100%;
 }
+
 .product-detail-left>h1 {
     font-weight: 900;
     font-size: 40px;
@@ -948,25 +961,35 @@ footer>ul>li>a {
         position: relative;
         overflow: hidden;
     }
-    .product-detail{
+
+    .product-detail {
         margin: 30px 0;
         width: 100%;
         height: 700px;
         flex-direction: column;
         position: relative;
     }
-    .product-detail-left{
+
+    .product-detail-left {
         width: 100%;
         height: 30%;
         padding: 0 10px;
     }
-    .product-detail-left h1{
+
+    .product-detail-left h1 {
         font-size: 30px;
         font-weight: bold;
     }
-    .product-detail-left span{margin: 0px;}
-    .product-detail-left p{display: none;}
-    .product-detail-left form{
+
+    .product-detail-left span {
+        margin: 0px;
+    }
+
+    .product-detail-left p {
+        display: none;
+    }
+
+    .product-detail-left form {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -975,87 +998,110 @@ footer>ul>li>a {
         height: 150px;
         padding: 0 10px;
     }
-    #quantity,#submit{
+
+    #quantity,
+    #submit {
         width: 100%;
         height: 50px;
-        margin:10px 0;
+        margin: 10px 0;
     }
-    .product-detail-right{
+
+    .product-detail-right {
         width: 100%;
         height: 70%;
     }
-    .product-detail-right img{
-        width:100%;
+
+    .product-detail-right img {
+        width: 100%;
         height: 60%;
         object-fit: cover;
     }
-    .related-products{
+
+    .related-products {
         margin: 20px 0;
 
     }
-    .related-products>p{
+
+    .related-products>p {
         text-align: center;
     }
-    .related-products>.container{
+
+    .related-products>.container {
         flex-direction: column;
         width: 100%;
         height: auto;
         margin: 0;
     }
-    .item-related{
+
+    .item-related {
         width: 100%;
-        height:33.333%;
+        height: 33.333%;
         margin-bottom: 40px;
     }
-    
+
 }
+
 /* tablet */
-@media only screen and (min-width:740px) and (max-width:1025px){
+@media only screen and (min-width:740px) and (max-width:1025px) {
     .wrapper-detail {
         width: 644px;
         height: auto;
         position: relative;
         overflow: hidden;
     }
-    .product-detail{
+
+    .product-detail {
         flex-direction: column;
         margin: 40px 0;
         width: 100%;
         height: auto;
         position: relative;
-        
+
     }
-    .product-detail-left{width: 100%;}
-    .product-detail-left>h1{
+
+    .product-detail-left {
         width: 100%;
     }
-    .product-detail-left>p{
+
+    .product-detail-left>h1 {
+        width: 100%;
+    }
+
+    .product-detail-left>p {
         display: none;
     }
-    .product-detail-right{width: 100%;}
-    .product-detail-right img{
+
+    .product-detail-right {
+        width: 100%;
+    }
+
+    .product-detail-right img {
         width: 80%;
         margin-left: 50%;
         padding-bottom: 80px;
         transform: translateX(-50%);
     }
 
-    .product-detail form{
+    .product-detail form {
         position: absolute;
         bottom: 0;
         width: 100%;
     }
-    #quantity,#submit{
+
+    #quantity,
+    #submit {
         width: 48%;
-        margin:10px 0;
+        margin: 10px 0;
     }
-    .related-products{
+
+    .related-products {
         margin-bottom: 0;
     }
 
 }
+
 /* pc */
-@media only screen and (min-width:1025px){
+@media only screen and (min-width:1025px) {
     .wrapper-detail {
         width: 1200px;
         height: auto;
@@ -1076,7 +1122,8 @@ footer>ul>li>a {
     margin-top: 36px;
     width: 100%;
 }
-.category-product{
+
+.category-product {
     display: none;
 }
 
@@ -1157,66 +1204,348 @@ footer>ul>li>a {
         position: relative;
         overflow: hidden;
     }
-    .banner-product{
+
+    .banner-product {
         width: 100%;
     }
-    .banner-product img{
+
+    .banner-product img {
         width: 100%;
     }
-    .top>ul{
+
+    .top>ul {
         display: none;
     }
-    .category-product{
+
+    .category-product {
         display: block;
         padding: 20px;
     }
-    .main-product-1{
+
+    .main-product-1 {
         flex-direction: column;
         margin-top: 0;
     }
-    .col{
+
+    .col {
         width: 100%;
-        height:33.33%;
+        height: 33.33%;
         margin-bottom: 40px;
-        padding: 0 10px ;
+        padding: 0 10px;
     }
-    
+
 }
+
 /* tablet */
-@media only screen and (min-width:740px) and (max-width:1025px){
+@media only screen and (min-width:740px) and (max-width:1025px) {
     .wrapper-product {
         width: 644px;
         height: auto;
         position: relative;
         overflow: hidden;
     }
-    .top>ul{
+
+    .top>ul {
         display: none;
     }
-    .category-product{
+
+    .category-product {
         display: block;
         padding: 20px;
     }
-    .main-product-1{
+
+    .main-product-1 {
         width: 100%;
         display: block;
     }
-    .col{
+
+    .col {
         display: flex;
         width: 100%;
-        height:auto;
+        height: auto;
         margin-bottom: 40px;
     }
-    .top{
-        padding:0 10px;
+
+    .top {
+        padding: 0 10px;
     }
-    .bottom{
-        padding:0 10px;
-    } 
+
+    .bottom {
+        padding: 0 10px;
+    }
 }
+
 /* pc */
-@media only screen and (min-width:1025px){
+@media only screen and (min-width:1025px) {
     .wrapper-product {
+        width: 1200px;
+        height: auto;
+    }
+}
+
+/* css sign-in */
+.logo-signIn-signUp {
+    width: 66px;
+    height: 29px;
+    margin: 45px auto 128px;
+}
+
+.title-from {
+    text-align: center;
+}
+
+.title-from span {
+    font-weight: 600;
+    font-size: 16px;
+    color: #2D3748;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.title-from p {
+    font-weight: 900;
+    font-size: 32px;
+    color: #1A202C;
+    margin-bottom: 48px;
+}
+
+.main-from-signUp {
+    width: 500px;
+    padding: 0 50px;
+    margin: auto;
+    height: auto;
+}
+
+.main-from-signUp>form {
+    width: 100%;
+    height: auto;
+}
+
+.main-from-signUp>form>label {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 12px 0 11px;
+    display: block;
+}
+
+.main-from-signUp>form>input {
+    width: 100%;
+    height: 50px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #C4C4C4;
+    padding-left: 17px;
+    border-radius: 5px;
+    border: 1px solid #37A9CD;
+}
+
+.main-from-signUp>form>button {
+    width: 100%;
+    height: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    background: #2D3748;
+    border-radius: 5px;
+}
+
+.main-from-signUp>form>button img {
+    margin: -4px 10px;
+}
+
+.main-from-signUp>form>input:focus {
+    outline-color: #37A9CD;
+}
+
+#submit-signIn {
+    background-color: #37A9CD;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin: 30px 0 15px;
+}
+
+.forgot-password {
+    margin: 32px auto 150px;
+    text-align: center;
+    width: 500px;
+    height: auto;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 18px;
+    color: #616161;
+    line-height: 35px;
+}
+
+.forgot-password a {
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 18px;
+    color: #37A9CD;
+}
+
+/* css sigm up */
+
+.logo-signIn-signUp {
+    width: 66px;
+    height: 29px;
+    margin: 45px auto 128px;
+}
+
+.title-from {
+    text-align: center;
+}
+
+.title-from span {
+    font-weight: 600;
+    font-size: 16px;
+    color: #2D3748;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.title-from p {
+    font-weight: 900;
+    font-size: 32px;
+    color: #1A202C;
+    margin-bottom: 48px;
+}
+
+.main-from {
+    width: 500px;
+    padding: 0 50px;
+    margin: auto;
+    height: auto;
+}
+
+.main-from>form {
+    width: 100%;
+    height: auto;
+}
+
+.main-from>form>label {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 12px 0 11px;
+    display: block;
+}
+
+.main-from>form>input {
+    width: 100%;
+    height: 50px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #C4C4C4;
+    padding-left: 17px;
+    border-radius: 5px;
+    border: 1px solid #37A9CD;
+}
+
+.main-from>form>button {
+    width: 100%;
+    height: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    background: #2D3748;
+    border-radius: 5px;
+}
+
+.main-from>form>button img {
+    margin: -4px 10px;
+}
+
+.main-from>form>input:focus {
+    outline-color: #37A9CD;
+}
+
+#submit-signUp {
+    background-color: #37A9CD;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin: 30px 0 15px;
+    margin-bottom: 150px;
+}
+
+/* responsive sign in -- sign up */
+
+/* mobilele */
+@media only screen and (max-width:740px) {
+    .wrapper {
+        width: 100%;
+        height: auto;
+    }
+
+    .logo-signIn-signUp {
+        display: none;
+    }
+
+    .title-from {
+        margin-top: 50px;
+    }
+    .title-from  p{
+        margin-bottom: 0px;
+        font-size: 25px;
+    }
+
+    .main-from-signUp,
+    .main-from {
+        width: 100%;
+        padding: 20px 40px;
+    }
+
+    .main-from-signUp>form>label,
+    .main-from>form>label {
+        display: none;
+    }
+
+    .main-from-signUp>form>input:focus,
+    .main-from>form>input:focus{
+        border-bottom: 2px solid #37A9CD;
+        transform: 0.25s;
+    }
+
+    .main-from-signUp>form>input,
+    .main-from>form>input {
+        border: none;
+        border-radius: 0;
+        border-bottom: 2px solid;
+        padding: 0;
+        width: 100%;
+        margin-top: 30px;
+        outline: none;
+    }
+    .main-from-signUp>form>input[type="submit"],
+    .main-from>form>input[type="submit"],
+    .main-from>form>button{
+        border-radius: 30px;
+    }
+
+    .forgot-password{
+        width: 100%;
+    }
+    .forgot-password a,p{
+        width: 100%;
+        font-size: 15px;
+    }
+}
+
+/* tablet */
+@media only screen and (min-width:740px) and (max-width:1025px) {
+    .wrapper {
+        width: 644px;
+        height: auto;
+    }
+}
+
+/* pc */
+@media only screen and (min-width:1025px) {
+    .wrapper {
         width: 1200px;
         height: auto;
     }
