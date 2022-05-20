@@ -483,6 +483,10 @@ footer>ul>li>a {
         margin-left: auto;
         font-weight: bold;
     }
+    .menu-mobile-tablet button>a{
+        text-decoration: none;
+        color: #000;
+    }
 
     .menu {
         display: none;
