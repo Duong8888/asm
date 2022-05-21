@@ -30,6 +30,10 @@ header {
     margin: 0 16px;
 }
 
+.active{
+    border-bottom: 4px solid #F54748;
+}
+
 .menu>ul>li>a {
     font-size: 18px;
     font-weight: 600;
@@ -1148,7 +1152,7 @@ footer>ul>li>a {
     margin-bottom: 24px;
 }
 
-.col a {
+.col>.top>ul>li {
     text-decoration: none;
     font-weight: 600;
     font-size: 20px;
@@ -1529,11 +1533,11 @@ footer>ul>li>a {
     .main-from>form>button{
         border-radius: 30px;
     }
-
     .forgot-password{
         width: 100%;
     }
-    .forgot-password a,p{
+    .forgot-password a,
+    .forgot-password p{
         width: 100%;
         font-size: 15px;
     }
