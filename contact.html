@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="shortcut icon" href="src/img/logo-2.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <a href="index.html"><img src="src/img/Fudo..png" alt=""></a>
+            </div>
+
+            <div class="box-icon-menu">
+                <label for="check"> <i class='bx bx-menu'></i></label>
+                <input type="checkbox" id="check">
+                <label for="check"><span for="check" class="overlay"></span></label>
+                <div class="menu-mobile-tablet">
+                    <ul>
+                        <label for="check" class='bx bx-x'></label>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="">Settings</a></li>
+                        <li><button><a href="sign-in.html">Sign In</a></button><button><a href="sign-up.html">Sign
+                                    Up</a></button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a class="menu-list" href="index.html">Home</a></li>
+                    <li><a class="menu-list" href="product.html">Products</a></li>
+                    <li><a class="menu-list " href="about.html">About Us</a></li>
+                    <li><a class="menu-list active" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="signIn-signUp">
+                <div class="icon"><i class='bx bx-cart'></i></div>
+                <button class="sign-in"><a href="sign-in.html">Sign in</a></button>
+                <button class="sign-up"><a href="sign-up.html">Sign up</a></button>
+            </div>
+        </header>
+        <main>
+            <div class="main-contact">
+                <div class="info-contact" onclick="display('1')">
+                    <div class="call">
+                        <i class='bx bx-phone-call'><span>CALL US</span></i><br>
+                        <span>+84 869 935 501</span>
+                    </div>
+                    <div class="location">
+                        <i class='bx bxs-map'><span>LOCATION</span></i><br>
+                        <span>Tuy Lai Commune, My Duc District, Hanoi City.</span>
+                    </div>
+                    <div class="time-working">
+                        <i class='bx bx-timer'><span>WORKING TIME</span></i><br>
+                        <span>Working time 8am to 6pm.</span>
+                    </div>
+                </div>
+                <div class="send-contact" onclick="display('2')">
+                    <form action="">
+                        <p>Contact Us</p>
+                        <input type="text" name="" id="" placeholder="Enter your Name">
+                        <input type="text" name="" id="" placeholder="Enter a valid email address">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Message.........."></textarea>
+                        <input type="submit" name="" id="" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <img src="src/img/Fudo..png" alt="">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+
+        </footer>
+    </div>
+    <script>
+        function display(box) {
+            var input = document.querySelector('input[type="submit"]');
+            var info = document.querySelector('.info-contact');
+            var send = document.querySelector('.send-contact');
+            if (box == '1') {
+                info.style.background = '#fff';
+                info.style.color = '#5D5D5D';
+                send.style.background = '#5D5D5D';
+                send.style.color = '#fff';
+                input.style.background = '#fff'
+                input.style.color = '#5D5D5D';
+                console.log('1');
+            }
+            if(box == '2') {
+                send.style.background = '#fff';
+                send.style.color = '#5D5D5D';
+                info.style.background = '#5D5D5D';
+                input.style.background = '#5D5D5D'
+                input.style.color = '#fff';
+                info.style.color = '#fff';
+                console.log('2');
+            }
+        }
+    </script>
+</body>
+
+</html>
