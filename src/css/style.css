@@ -25,7 +25,7 @@ header {
     display: none;
 }
 
-.bx-cart{
+.bx-cart {
     color: #000;
     text-decoration: none;
 }
@@ -36,7 +36,7 @@ header {
 }
 
 
-.active{
+.active {
     border-bottom: 4px solid #F54748;
 }
 
@@ -66,15 +66,22 @@ header {
 }
 
 
-.sign-in{background-color: #fff;}
-.sign-in>a{
+.sign-in {
+    background-color: #fff;
+}
+
+.sign-in>a {
     text-decoration: none;
     color: #F54748;
     font-weight: 600;
     font-size: 14px;
 }
-.sign-up{background-color: #F54748;}
-.sign-up>a{
+
+.sign-up {
+    background-color: #F54748;
+}
+
+.sign-up>a {
     text-decoration: none;
     color: #FFFFFF;
     font-weight: 600;
@@ -197,7 +204,7 @@ form>#input-1 {
     border-radius: 60px;
 }
 
-#select-price{
+#select-price {
     width: 33%;
     font-size: 20px;
     margin-top: 50px;
@@ -357,7 +364,7 @@ select {
     padding-left: 20px;
 }
 
-label {
+form label {
     text-transform: uppercase;
     font-weight: 400;
     font-size: 18px;
@@ -504,7 +511,8 @@ footer>ul>li>a {
         margin-left: auto;
         font-weight: bold;
     }
-    .menu-mobile-tablet button>a{
+
+    .menu-mobile-tablet button>a {
         text-decoration: none;
         color: #000;
     }
@@ -1342,6 +1350,13 @@ footer>ul>li>a {
     height: auto;
 }
 
+.main-from-signUp>form>span {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    color: red;
+}
+
 .main-from-signUp>form {
     width: 100%;
     height: auto;
@@ -1412,7 +1427,7 @@ footer>ul>li>a {
     color: #37A9CD;
 }
 
-/* css sigm up */
+/* css sign-up */
 
 .logo-signIn-signUp {
     width: 66px;
@@ -1458,6 +1473,13 @@ footer>ul>li>a {
     line-height: 19px;
     margin: 12px 0 11px;
     display: block;
+}
+
+.main-from>form>span {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    color: red;
 }
 
 .main-from>form>input {
@@ -1515,7 +1537,8 @@ footer>ul>li>a {
     .title-from {
         margin-top: 50px;
     }
-    .title-from  p{
+
+    .title-from p {
         margin-bottom: 0px;
         font-size: 25px;
     }
@@ -1532,10 +1555,20 @@ footer>ul>li>a {
     }
 
     .main-from-signUp>form>input:focus,
-    .main-from>form>input:focus{
+    .main-from>form>input:focus {
         border-bottom: 2px solid #37A9CD;
         transform: 0.25s;
     }
+
+    .main-from-signUp>form>span,
+    .main-from>form>span {
+        display: block;
+        height: 20px;
+        line-height: 20px;
+        color: red;
+        flex-direction: column-reverse;
+    }
+
 
     .main-from-signUp>form>input,
     .main-from>form>input {
@@ -1550,18 +1583,21 @@ footer>ul>li>a {
 
     .main-from-signUp>form>input[type="submit"],
     .main-from>form>input[type="submit"],
-    .main-from>form>button{
+    .main-from>form>button {
         border-radius: 30px;
     }
-    .forgot-password{
+
+    .forgot-password {
         width: 100%;
     }
+
     .forgot-password a,
-    .forgot-password p{
+    .forgot-password p {
         width: 100%;
         font-size: 15px;
     }
-    #password ::placeholder{
+
+    #password ::placeholder {
         display: none;
     }
 }
@@ -1583,55 +1619,62 @@ footer>ul>li>a {
 }
 
 /* css about */
-.content-about{
+.content-about {
     padding: 50px 0;
     width: 100%;
     height: auto;
 }
 
-.about-top{
+.about-top {
     width: 100%;
     height: 500px;
     display: flex;
     /* align-items: center; */
     overflow: hidden;
 }
-.top-left{
+
+.top-left {
     width: 50%;
 }
 
-.top-left>h4{
+.top-left>h4 {
     font-size: 40px;
     font-weight: 800;
     margin-top: 100px;
     color: #F54748;
 }
-.top-left>h4>span{
+
+.top-left>h4>span {
     color: #000;
 }
-.top-left>p{
+
+.top-left>p {
     margin: 20px 0 40px;
     font-weight: 400;
     font-size: 18px;
     color: #5D5D5D;
 }
-.top-left>span{
+
+.top-left>span {
     font-weight: 400;
     font-size: 18px;
     font-weight: bold;
     color: #000;
 }
-.top-right{
+
+.top-right {
     width: 50%;
-}   
-.top-right>img{
+}
+
+.top-right>img {
     width: 600px;
     height: 600px;
     object-fit: cover;
     border-radius: 50%;
-    transform: translate(10%,-20%);
+    transform: translate(10%, -20%);
 }
-.about-bottom{
+
+.about-bottom {
     width: 100%;
     height: 100px;
     height: auto;
@@ -1641,22 +1684,24 @@ footer>ul>li>a {
 
 
 .bottom-left,
-.bottom-right{
+.bottom-right {
     width: 50%;
     height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .bottom-left p,
-.bottom-right p{
+.bottom-right p {
     width: 550px;
     padding: 0 50px 0 20px;
     font-weight: bold;
     color: #000;
 }
+
 .bottom-left i,
-.bottom-right i{
+.bottom-right i {
     width: 60px;
     height: 60px;
     background-color: #000;
@@ -1667,81 +1712,91 @@ footer>ul>li>a {
     align-items: center;
     border-radius: 50%;
 }
+
 @media only screen and (max-width:740px) {
-    .about-top{
+    .about-top {
         flex-direction: column-reverse;
         height: 800px;
     }
-    main{
+
+    main {
         padding: 0 10px;
     }
+
     .top-left,
-    .top-right{
-       width: 100%;
-       height: 100%;
+    .top-right {
+        width: 100%;
+        height: 100%;
     }
-    .top-left{
+
+    .top-left {
         transform: translateY(-80px);
     }
-    .top-left>h4{
+
+    .top-left>h4 {
         margin-top: 0px;
         text-align: center;
     }
+
     .top-left>p,
-    .top-left>span{
+    .top-left>span {
         text-align: center;
         display: block;
         font-size: 20px;
     }
-    .top-right{
+
+    .top-right {
         position: relative;
     }
-    .top-right>img{
+
+    .top-right>img {
         position: absolute;
         top: -5%;
         right: -5%;
         width: 350px;
         height: 350px;
     }
-    .about-bottom{
+
+    .about-bottom {
         margin: 0;
         flex-direction: column;
         justify-content: space-between;
     }
+
     .bottom-left,
-    .bottom-right{
+    .bottom-right {
         margin-bottom: 40px;
         width: 100%;
     }
+
     .bottom-right>p,
-    .bottom-left>p{
+    .bottom-left>p {
         width: 80%;
     }
 }
 
 /* tablet */
 @media only screen and (min-width:740px) and (max-width:1025px) {
-    .top-right{
+    .top-right {
         position: relative;
     }
-    .top-right>img{
+
+    .top-right>img {
         position: absolute;
         top: -5%;
         right: -10%;
         width: 400px;
         height: 400px;
     }
-    
+
     .bottom-right>p,
-    .bottom-left>p{
+    .bottom-left>p {
         width: 80%;
     }
 }
 
 /* pc */
-@media only screen and (min-width:1025px) {
-
-}
+@media only screen and (min-width:1025px) {}
 
 /* css contact */
 
@@ -1752,16 +1807,19 @@ footer>ul>li>a {
     justify-content: space-around;
     margin: 50px 0;
 }
-.info-contact i{
+
+.info-contact i {
     font-size: 30px;
 }
-i>span{
+
+i>span {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: bold;
-    display:inline-block;
+    display: inline-block;
     margin-left: 20px;
 }
+
 .call>span,
 .location>span,
 .time-working>span {
@@ -1771,27 +1829,29 @@ i>span{
 
 .info-contact,
 .send-contact {
-    width:47%;
+    width: 47%;
     height: 600px;
-    box-shadow:  0 0 20px black;
-    padding: 100px; 
+    box-shadow: 0 0 20px black;
+    padding: 100px;
 }
 
 .info-contact {
     color: #fff;
     background-color: #5D5D5D;
 }
-.send-contact p{
+
+.send-contact p {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
 }
-.send-contact>form{
+
+.send-contact>form {
     width: 100%;
 }
 
 
-.send-contact>form>input{
+.send-contact>form>input {
     width: 100%;
     height: 50px;
     padding-left: 20px;
@@ -1799,13 +1859,14 @@ i>span{
     font-size: 20px;
 }
 
-.send-contact>form>input[type="submit"]{
+.send-contact>form>input[type="submit"] {
     background-color: #5D5D5D;
     border: none;
     color: #fff;
     font-weight: bold;
 }
-.send-contact>form>textarea{
+
+.send-contact>form>textarea {
     width: 100%;
     padding: 20px;
     height: 100px;
@@ -1814,11 +1875,12 @@ i>span{
 }
 
 @media only screen and (max-width:740px) {
-    .main-contact{
+    .main-contact {
         flex-direction: column;
     }
+
     .info-contact,
-    .send-contact{
+    .send-contact {
         margin: 20px 0;
         width: 100%;
         box-shadow: 0 0 10px black;
@@ -1826,8 +1888,8 @@ i>span{
         margin-top: 0px;
     }
 
-    .info-contact{
-        padding:50px;
+    .info-contact {
+        padding: 50px;
     }
 
     .send-contact>form>input[type="text"],
@@ -1836,6 +1898,7 @@ i>span{
         outline: none;
         border-bottom: 2px solid black;
     }
+
     .send-contact>form>input[type="text"]:focus,
     .send-contact>form>textarea:focus {
         border-bottom: 2px solid blue;
@@ -1844,23 +1907,25 @@ i>span{
 
 /* tablet */
 @media only screen and (min-width:740px) and (max-width:1025px) {
+
     .info-contact,
-    .send-contact{
+    .send-contact {
         margin: 20px 0;
         box-shadow: 0 0 10px black;
         padding: 10px;
     }
 }
+
 /* pc */
-@media only screen and (min-width:1025px) {
-}
+@media only screen and (min-width:1025px) {}
+
 /* css blog */
 
-main{
+main {
     height: auto;
 }
 
-.content-blog{
+.content-blog {
     position: relative;
     width: 100%;
     height: 200px;
@@ -1870,7 +1935,7 @@ main{
     justify-content: center;
 }
 
-.content-blog>h1{
+.content-blog>h1 {
     color: #fff;
     position: absolute;
     z-index: 10;
@@ -1878,7 +1943,7 @@ main{
     text-shadow: 0 0 2px black;
 }
 
-.back-video{
+.back-video {
     position: absolute;
     width: 100%;
     top: 0;
@@ -1886,7 +1951,8 @@ main{
     object-fit: cover;
     border-radius: 10px;
 }
-.main-blog>p{
+
+.main-blog>p {
     display: block;
     font-size: 40px;
     margin: 50px 0 10px;
@@ -1894,10 +1960,11 @@ main{
     color: #F54748;
 }
 
-#selectBlog{
+#selectBlog {
     width: 49%;
 }
-.news{
+
+.news {
     width: 100%;
     height: auto;
     display: flex;
@@ -1905,10 +1972,100 @@ main{
     justify-content: space-between;
 }
 
-.box-news{
+.news-details{
+    background-color: #fff;
+    top: 20px;
+    left: 100px;
+    right: 100px;
+    bottom: 20px;
+    position: fixed;
+    z-index: -10;
+    overflow: auto;
+}
+
+.main-blog>.overlay{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.icon-close{
+    display: flex;
+    justify-content: end;
+}
+.icon-close>i{
+    font-size: 40px;
+    font-weight: bold;
+    position: fixed;
+}
+.icon-close>i:hover{
+    background-color: #F54748;
+    color: #fff;
+}
+.infoUser-1{
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.box-user{
+    display: flex;
+    margin-bottom:20px;
+    align-items: center;
+}
+
+.heart>.bx{
+    font-size: 40px;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+}
+.heart>.bx:hover{
+   transform: scale(1);
+   background-color: #ccc;
+}
+.avatar{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.avatar>img{
+    width: 100%;
+}
+.conten-news{
+    width: 100%;
+}
+.conten-news>img{
+    width: 100%;
+}
+.conten-news>p{
+    font-size: 30px;
+    font-weight: bold;
+    color: #5D5D5D;
+    margin-bottom: 10px;
+}
+.conten-news>span{
+    font-size: 20px;
+    display: block;
+    margin: 20px 0;  
+}
+
+.heart{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 2px solid #5D5D5D;
+    padding-top: 20px;
+}
+
+.box-news {
     width: 49%;
     height: 585px;
-    border: 1px solid #5D5D5D;
+    box-shadow: 0 0 10px #ccc;
     margin: 20px 0;
     border-radius: 10px;
     overflow: hidden;
@@ -1918,7 +2075,8 @@ main{
     width: 100%;
     height: 45%;
 }
-.newImg img{
+
+.newImg img {
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -1934,23 +2092,25 @@ main{
 
 }
 
-.infoUser>img{
+.infoUser>img {
     width: 50px;
     height: 50px;
     object-fit: cover;
     border-radius: 50%;
     margin-right: 20px;
 }
-.nameUser>p{
+
+.nameUser>p {
     font-weight: bold;
 }
 
-.title-new{
+.title-new {
     width: 100%;
     margin: 10px 0;
     padding: 0 20px;
 }
-.title-new>a{
+
+.title-new>a {
     font-size: 30px;
     font-weight: bold;
     color: #5D5D5D;
@@ -1959,17 +2119,19 @@ main{
     display: block;
     margin: 10px 0;
 }
-.title-new>a:hover{
+
+.title-new>a:hover {
     color: #F54748;
     text-decoration: underline;
 }
 
-.title-new>p{
+.title-new>p {
     font-size: 20px;
     width: 100%;
     height: 100px;
 }
-.views-heart{
+
+.views-heart {
     display: flex;
     padding: 0 20px;
     justify-content: space-between;
@@ -1977,7 +2139,17 @@ main{
     height: 50px;
     align-items: center;
 }
+input[type="checkbox"]{
+    display: none;
+}
 
+.bxs-heart{
+    font-size: 30px;
+    transition: 0.25s;
+}
+.bxs-heart:hover{
+    transform: scale(1.5);
+}
 
 /* mobile */
 @media only screen and (max-width:740px) {
@@ -1985,51 +2157,76 @@ main{
     .content-blog {
         height: 100px;
     }
-    .content-blog h1{
+
+    .content-blog h1 {
         font-size: 25px;
     }
-    #selectBlog{
+
+    #selectBlog {
         width: 100%;
     }
-    .main-blog>p{
+
+    .main-blog>p {
         margin-top: 10px;
         text-align: center;
     }
-    .news{
-        flex-direction: column;
+
+    .news-details{
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        display: none;
     }
-    .box-news{
-        width: 100%;
-    }
-    .title-new>a{
-        font-size: 25px;
-    }
-    .title-new>p{
+
+    .news-details p{
         font-size: 15px;
     }
-    .views-heart>span{
+    .news-details span{
+        font-size: 15px;
+    }
+
+    .news {
+        flex-direction: column;
+    }
+
+    .box-news {
+        width: 100%;
+    }
+
+    .title-new>a {
+        font-size: 20px;
+    }
+
+    .title-new>p {
+        font-size: 15px;
+    }
+
+    .views-heart>span {
         font-size: 25px;
     }
 }
 
 /* tablet */
 @media only screen and (min-width:740px) and (max-width:1025px) {
-    .box-news{
+    .box-news {
         height: 600px;
     }
-    .content-blog h1{
+
+    .content-blog h1 {
         font-size: 35px;
     }
-    .title-new>a{
+    .title-new>a {
+        font-size: 21px;
+    }
+    .title-new>a {
         font-size: 25px;
     }
-    .title-new>p{
+
+    .title-new>p {
         font-size: 15px;
     }
 }
+
 /* pc */
-@media only screen and (min-width:1025px) {
-
-}
-
-
+@media only screen and (min-width:1025px) {}

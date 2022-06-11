@@ -81,6 +81,48 @@ const ListCategory = [
     }
 ];
 
+const ListBlogNews = [
+    {
+        id: 1,
+        title: "GitHub là gì? Cách chia sẻ mã nguồn, tải code dễ dàng",
+        subTitle: "GitHub là dịch vụ server quản lý nhiều phiên bản code, giúp lưu trữ chúng và cả nội dung dự án của hai hay nhiều tài khoản của lập trình viên.....",
+        img: "./src/img/github-la-gi.jpg",
+        content: "GitHub được sử dụng chủ yếu cho dự án có nhiều người cùng hợp tác và cần giám sát toàn bộ thay đổi của dự án. Bên cạnh đó, GitHub còn có khả năng khôi phục code khi cần thiết. Khi sử dụng GitHub, ngoài các công việc chính như tạo Branch, tạo Pull Request và Fork một Repository, bạn có thể theo dõi, tương tác với người khác như một mạng xã hội thông thường.",
+        BlogCategoryId: 1
+    },
+    {
+        id: 2,
+        title: "Vị tướng thứ 158 của LMHT: Zeri – Tia chớp thành Zaun",
+        subTitle: "Trong thông báo đầu tiên của năm 2022, Riot Games đã bất ngờ đem đến một niềm vui cho người hâm mộ thông qua việc nâng cấp.....",
+        img: "./src/img/tuong-moi-lmht-zeri-1-696x391.jpg",
+        content: "Trong thông báo đầu tiên của năm 2022, Riot Games đã bất ngờ đem đến một niềm vui cho người hâm mộ thông qua việc nâng cấp một số chi tiết trong LMHT. Và thay đổi lớn nhất được nhiều người chơi chắc chắn là sự xuất hiện của tướng mới Zeri.Đại diện hãng game cho biết: “Chúng tôi muốn giới thiệu một Xạ Thủ mới linh hoạt trong di chuyển, có tốc độ chơi với tốc độ của súng máy và mang lại cảm giác như một game bắn súng.” Theo đó, Zeri sẽ là một Xạ Thủ khủng, vượt tầm cả Ezreal. Đây là vị tướng thứ 158 được giới thiệu trong LMHT.",
+        BlogCategoryId: 2
+    },
+    {
+        id: 3,
+        title: "Chi tiết bộ kỹ năng của tướng Yue trong Liên Quân Mobile",
+        subTitle: "Thông số kỹ năng của Yue Ngọc Phiến Công Chúa - vị tướng mới được ra mắt trong bản cập nhật ......",
+        img: "./src/img/gt8mee8-122540.png",
+        content: "Chiêu 1 - Cắt Giang Sơn,Chiêu 2 - Trảm Thiên ĐịaChiêu 3 - Đạo Quân Vương.Yue là công chúa thứ 10 trong hoàng tộc Vương Quốc Rồng. Ngoài dung mạo xinh đẹp, Yue còn có trí tuệ và năng lực tuyệt đỉnh. Trong video giới thiệu phiên bản Trung Quốc, Yue có vẻ như là bạn bè và có chút liên quan tới Qi - cô nàng Võ Sư Bánh Bao.",
+        BlogCategoryId: 2
+    },
+
+
+
+];
+
+const BlogCategory = [
+    {
+        id: 1,
+        name: "GitHub"
+    },
+    {
+        id: 2,
+        name: "Game"
+    },
+];
+
+
 function showProduct(items) {
     let product = document.querySelector('.main-product');
     if (product) {
@@ -210,9 +252,9 @@ function ProductPage() {
 ProductPage();
 function CategoryPage(q) {
     var boxProduct = document.querySelectorAll('.box8');
-    if(boxProduct[0]){
-        for(let i in q){
-            boxProduct[i].innerHTML +=`
+    if (boxProduct[0]) {
+        for (let i in q) {
+            boxProduct[i].innerHTML += `
             <img src="${q[i].image}" alt="">
             <p>${q[i].name}</p>
             <span>$${q[i].price}</span>
@@ -224,18 +266,18 @@ function CategoryPage(q) {
 
 CategoryPage(ListProduct);
 
-function reRender(cateId){
+function reRender(cateId) {
     var boxProduct = document.querySelectorAll('.box8');
-    const filterCategory = ListProduct.filter(function(item){
+    const filterCategory = ListProduct.filter(function (item) {
         return item.category == cateId
     });
 
-    if(boxProduct){
-        for(let i in ListProduct){
-            boxProduct[i].innerHTML =``;
+    if (boxProduct) {
+        for (let i in ListProduct) {
+            boxProduct[i].innerHTML = ``;
         }
-        for(let i in filterCategory){
-            boxProduct[i].innerHTML =`
+        for (let i in filterCategory) {
+            boxProduct[i].innerHTML = `
             <img src="${filterCategory[i].image}" alt="">
             <p>${filterCategory[i].name}</p>
             <span>$${filterCategory[i].price}</span>
@@ -243,7 +285,7 @@ function reRender(cateId){
             `;
         }
     }
-   
+
 };
 
 
@@ -281,10 +323,170 @@ function reRender(cateId){
 //     }
 // }
 
+// validate from
 
+var signUp = document.querySelector('#submit-signUp');
+var signIn = document.querySelector('#submit-signIn');
+function checkFrom() {
+    let name = document.querySelector('#name');
+    let email = document.querySelector('#email');
+    let pass = document.querySelector('#password');
+    let rePass = document.querySelector('#re-password');
+    let span = document.querySelectorAll('span');
 
+    if (signUp) {
+        if (name.value.length == 0) {
+            span[2].innerText = "Vui lòng nhập tên.";
+        } else {
+            span[2].innerText = "";
+        }
+        if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value))) {
+            span[1].innerText = "Email không hợp lệ.";
+        } else {
+            span[1].innerText = "";
+        }
+        if (pass.value.length == 0) {
+            span[3].innerText = "Vui lòng nhập password.";
+        } else {
+            span[3].innerText = "";
+        }
+        if (rePass.value != pass.value) {
+            span[4].innerText = "Mật Khẩu không Khớp.";
+        } else {
+            span[4].innerText = "";
+        }
+    } else {
+        if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value))) {
+            span[1].innerText = "Email không hợp lệ.";
+        } else {
+            span[1].innerText = "";
+        }
+        if (pass.value.length == 0) {
+            span[2].innerText = "Vui lòng nhập password.";
+        } else {
+            span[2].innerText = "";
+        }
+    }
 
+}
+if (signUp) {
+    signUp.addEventListener('click', checkFrom);
+}
 
+if (signIn) {
+    signIn.addEventListener('click', checkFrom);
+}
 
+// blog
 
+let news = document.querySelector('.news');
+function displayBlogNews(items) {
+    if (news) {
+        news.innerHTML = ``;
+        for (let i of items) {
+            news.innerHTML += `
+        <div class="box-news">
+        <div class="newImg">
+            <img onclick="displayNews(${i.id})" src="${i.img}" alt="">
+        </div>
+        <div class="infoUser">
+            <img src="src/img/img-11.png" alt="">
+            <div class="nameUser">
+                <p>Anh Duong</p>
+                <span>Dec 9, 2021</span>
+            </div>
+        </div>
+        <div class="title-new">
+            <a onclick="displayNews(${i.id})">${i.title}</a>
+            <p>${i.subTitle}</p>
+        </div>
+        <div class="views-heart">
+            <p>100 viwes</p>
+            <span><i class='bx bxs-heart' onclick="heartClick(this)"></i></span>
+        </div>
+    </div>
+        `;
+        }
+    }
+}
+if (news) { displayBlogNews(ListBlogNews); }
+let overlay = document.querySelector('.main-blog>.overlay');
+let newsDetails = document.querySelector('.news-details');
+function displayNews(items) {
+    if (newsDetails) {
+        newsDetails.style.display ='block';
+        newsDetails.style.zIndex = '20'
+        overlay.style.display = "block";
+        var filter = ListBlogNews.find(function (i) {
+            return i.id == items;
+        })
+        newsDetails.innerHTML = `
+        <div class="icon-close">
+        <i onclick="closeNews()" class='bx bx-x'></i>
+    </div>
+    <div class="body-News">
+        <div class="infoUser-1">
+            <div class="box-user">
+                <div class="avatar">
+                    <img src="src/img/img-11.png" alt="">
+                </div>
 
+                <div class="user">
+                    <p>Anh Duong</p>
+                    <span>Dec 9, 2021</span>
+                </div>
+            </div>
+
+            <div class="conten-news">
+                <p>${filter.title}</p>
+                <img src="${filter.img}" alt="">
+                <span>${filter.content}</span>
+            </div>
+            <div class="heart">
+                <i class='bx bxs-heart' onclick="heartClick(this)"></i>
+                <i class='bx bxs-message-dots'></i>
+            </div>
+        </div>
+    </div>
+        `;
+    }
+}
+function closeNews() {
+    newsDetails.style.display = 'none';
+    overlay.style.display = "none";
+}
+let slectNews = document.querySelector('#selectBlog');
+function filterNews() {
+    if (slectNews) {
+
+        let game = ListBlogNews.filter(function (i) {
+            return i.BlogCategoryId == "2";
+        });
+        let github = ListBlogNews.filter(function (i) {
+            return i.BlogCategoryId == "1";
+        });
+
+        if (slectNews.value == "") {
+            displayBlogNews(ListBlogNews);
+        }
+        if (slectNews.value == "Game") {
+            displayBlogNews(game);
+        }
+        if (slectNews.value == "GitHub") {
+            displayBlogNews(github);
+        }
+    }
+
+}
+if (slectNews) {
+    slectNews.addEventListener('change',filterNews);
+}
+let count = 0;
+function heartClick(heart){
+    if(count%2==0){
+        heart.style.color = 'red';
+    }else{
+        heart.style.color = 'black';
+    }
+    count++;
+}

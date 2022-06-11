@@ -63,77 +63,118 @@
                 <p>Blog</p>
                 <select name="" id="selectBlog">
                     <option value="">All Posts</option>
-                    <option value=""></option>
-                    <option value=""></option>
+                    <option value="Game">Game</option>
+                    <option value="GitHub">GitHub</option>
                 </select>
+
+
+                <div class="news-details">
+                    <!-- <div class="icon-close">
+                        <i class='bx bx-x'></i>
+                    </div>
+                    <div class="body-News">
+                        <div class="infoUser-1">
+                            <div class="box-user">
+                                <div class="avatar">
+                                    <img src="src/img/img-11.png" alt="">
+                                </div>
+
+                                <div class="user">
+                                    <p>Anh Duong</p>
+                                    <span>Dec 9, 2021</span>
+                                </div>
+                            </div>
+
+                            <div class="conten-news">
+                                <p>Vị tướng thứ 158 của LMHT: Zeri – Tia chớp thành Zaun</p>
+                                <img src="src/img/github-la-gi.jpg" alt="">
+                                <span>Trong thông báo đầu tiên của năm 2022, Riot Games đã bất ngờ đem đến một niềm vui
+                                    cho người hâm mộ thông qua việc nâng cấp một số chi tiết trong LMHT. Và thay đổi lớn
+                                    nhất được nhiều người chơi chắc chắn là sự xuất hiện của tướng mới Zeri.Đại diện
+                                    hãng game cho biết: “Chúng tôi muốn giới thiệu một Xạ Thủ mới linh hoạt trong di
+                                    chuyển, có tốc độ chơi với tốc độ của súng máy và mang lại cảm giác như một game bắn
+                                    súng.” Theo đó, Zeri sẽ là một Xạ Thủ khủng, vượt tầm cả Ezreal. Đây là vị tướng thứ
+                                    158 được giới thiệu trong LMHT.</span>
+                            </div>
+                            <div class="heart">
+                                <i class='bx bxs-heart'></i>
+                                <i class='bx bxs-message-dots'></i>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div onclick="closeNews()" class="overlay"></div>
+
+
+
                 <div class="news">
-                   <div class="box-news">
-                       <div class="newImg">
-                           <img src="src/img/image 26 (3).png" alt="">
-                       </div>
-                       <div class="infoUser">
-                           <img src="src/img/img-11.png" alt="">
-                           <div class="nameUser">
-                               <p>Anh Duong</p>
-                               <span>Dec 9, 2021</span>
-                           </div>
-                       </div>
-                       <div class="title-new">
-                           <a href="">The one thing I would tell to my 16 year old self</a>
-                           <p>Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading....</p>
-                       </div>
-                       <div class="views-heart">
-                           <p>100 viwes</p>
-                           <span><i class='bx bxs-heart'></i></span>
-                       </div>
-                   </div>
-
-                   <div class="box-news">
-                    <div class="newImg">
-                        <img src="src/img/image 26 (3).png" alt="">
-                    </div>
-                    <div class="infoUser">
-                        <img src="src/img/img-11.png" alt="">
-                        <div class="nameUser">
-                            <p>Anh Duong</p>
-                            <span>Dec 9, 2021</span>
+                    <!-- <div class="box-news">
+                        <div class="newImg">
+                            <img src="src/img/image 26 (3).png" alt="">
+                        </div>
+                        <div class="infoUser">
+                            <img src="src/img/img-11.png" alt="">
+                            <div class="nameUser">
+                                <p>Anh Duong</p>
+                                <span>Dec 9, 2021</span>
+                            </div>
+                        </div>
+                        <div class="title-new">
+                            <a href="">Vị tướng thứ 158 của LMHT: Zeri – Tia chớp thành Zaun</a>
+                            <p>Create a blog post subtitle that summarizes your post in a few short, punchy sentences
+                                and entices your audience to continue reading....</p>
+                        </div>
+                        <div class="views-heart">
+                            <p>100 viwes</p>
+                            <span><i class='bx bxs-heart'></i></span>
                         </div>
                     </div>
-                    <div class="title-new">
-                        <a href="">The one thing I would tell to my 16 year old self</a>
-                        <p>Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading....</p>
-                    </div>
-                    <div class="views-heart">
-                        <p>100 viwes</p>
-                        <span><i class='bx bxs-heart'></i></span>
-                    </div>
-                </div>
 
-                <div class="box-news">
-                    <div class="newImg">
-                        <img src="src/img/image 26 (3).png" alt="">
-                    </div>
-                    <div class="infoUser">
-                        <img src="src/img/img-11.png" alt="">
-                        <div class="nameUser">
-                            <p>Anh Duong</p>
-                            <span>Dec 9, 2021</span>
+                    <div class="box-news">
+                        <div class="newImg">
+                            <img src="./src/img/github-la-gi.jpg" alt="">
+                        </div>
+                        <div class="infoUser">
+                            <img src="src/img/img-11.png" alt="">
+                            <div class="nameUser">
+                                <p>Anh Duong</p>
+                                <span>Dec 9, 2021</span>
+                            </div>
+                        </div>
+                        <div class="title-new">
+                            <a href="">The one thing I would tell to my 16 year old self</a>
+                            <p>Create a blog post subtitle that summarizes your post in a few short, punchy sentences
+                                and entices your audience to continue reading....</p>
+                        </div>
+                        <div class="views-heart">
+                            <p>100 viwes</p>
+                            <span><i class='bx bxs-heart'></i></span>
                         </div>
                     </div>
-                    <div class="title-new">
-                        <a href="">The one thing I would tell to my 16 year old self</a>
-                        <p>Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading....</p>
-                    </div>
-                    <div class="views-heart">
-                        <p>100 viwes</p>
-                        <span><i class='bx bxs-heart'></i></span>
-                    </div>
-                </div>
 
-
+                    <div class="box-news">
+                        <div class="newImg">
+                            <img src="./src/img/gt8mee8-122540.png" alt="">
+                        </div>
+                        <div class="infoUser">
+                            <img src="src/img/img-11.png" alt="">
+                            <div class="nameUser">
+                                <p>Anh Duong</p>
+                                <span>Dec 9, 2021</span>
+                            </div>
+                        </div>
+                        <div class="title-new">
+                            <a>Chi tiết bộ kỹ năng của tướng Yue trong Liên Quân Mobile</a>
+                            <p>Trong thông báo đầu tiên của năm 2022, Riot Games đã bất ngờ đem đến một niềm vui cho
+                                người hâm mộ thông qua việc nâng cấp.....</p>
+                        </div>
+                        <div class="views-heart">
+                            <p>100 viwes</p>
+                            <span><i class='bx bxs-heart'></i></span>
+                        </div>
+                    </div> -->
                 </div>
             </div>
-            
         </main>
         <footer>
             <img src="src/img/Fudo..png" alt="">
@@ -146,6 +187,7 @@
 
         </footer>
     </div>
+    <script src="./src/js/main.js"></script>
 </body>
 
 </html>
