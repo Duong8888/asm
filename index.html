@@ -5,148 +5,285 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="shortcut icon" href="src/img/logo-2.png" type="image/x-icon">
+    <!-- Link css -->
     <link rel="stylesheet" href="src/css/style.css">
+    <!-- Link icon -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="src/img/logo.png" type="image/x-icon">
+    <title>Supermarket</title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <header>
-            <div class="logo">
-                <a href="index.html"><img src="src/img/Fudo..png" alt=""></a>
-            </div>
-   
-            <div class="box-icon-menu">
-                <label for="check"> <i class='bx bx-menu'></i></label>
-                <input type="checkbox" id="check">
-                <label for="check"><span for="check" class="overlay"></span></label>
-                <div class="menu-mobile-tablet">
-                    <ul>
-                        <label for="check" class='bx bx-x'></label>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="product.html">Products</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="">Settings</a></li>
-                        <li><button><a href="sign-in.html">Sign In</a></button><button><a href="sign-up.html">Sign Up</a></button></li>
-                    </ul> 
-                </div>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a class="menu-list active" href="index.html">Home</a></li>
-                    <li><a class="menu-list" href="product.html">Products</a></li>
-                    <li><a class="menu-list" href="about.html">About Us</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a class="menu-list" href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="signIn-signUp">
-                <div class="icon"><a href="cart.html" class='bx bx-cart'></a></div>
-                <button class="sign-in"><a href="sign-in.html">Sign in</a></button>
-                <button class="sign-up"><a href="sign-up.html">Sign up</a></button>
-            </div>
-        </header>
-        <main>
-            <div class="banner">
-                <div class="banner-left">
-                    <button>Quality Food</button>
-                    <div class="title-banner">
-                        <a>
-                            Fastest <br> <span>Delivery</span> & <br> Easy <span>Pickup</span>
-                        </a>
-                        <p>Best cooks and best delivery guys all at your service. Hot tasty food will reach you in 60
-                            minutes.</p>
+    <!-- loading -->
+    <div class="loading">
+        <div class="loading__main" style="--value:1"></div>
+        <div class="loading__main" style="--value:2"></div>
+        <div class="loading__main" style="--value:3"></div>
+        <div class="loading__main" style="--value:4"></div>
+        <div class="loading__main" style="--value:5"></div>
+        <div class="loading__main" style="--value:6"></div>
+        <div class="loading__main" style="--value:7"></div>
+        <div class="loading__main" style="--value:8"></div>
+        <div class="loading__main" style="--value:9"></div>
+        <div class="loading__main" style="--value:10"></div>
+    </div>
+        <!-- end loading -->
+
+        <div class="container">
+            <header>
+                <nav class="sign-in">
+                    <div class="about-support">
+                        <a href="#hello">About Us</a>
+                        <a href="">Customer Support</a>
                     </div>
-                    <form action="">
-                        <input type="text" name="" id="input" placeholder="Enter your delivery location" required>
-                        <input type="submit" value="Discover" id="input-1">
-                    </form>
+
+                    <div class="promotion">
+                        <p>Get 20% off your first order.<a href="">Subscribe</a></p>
+                    </div>
+
+                    <div class="main-signIn">
+                        <div class="avatar"></div>
+                        <a href="signIn.html">Log In</a>
+                    </div>
+                </nav>
+                <nav class="search-cart-logo">
+                    <div class="logo"><a href="">
+                            Clovers.</a></div>
+                    <div class="search">
+                        <form action="">
+                            <input type="search" placeholder="Search a product e.g. milk" required>
+                            <button><i class='bx bx-search'></i></button>
+                        </form>
+                    </div>
+                    <div class="cart-location">
+                        <a href=""> <i class='bx bxs-location-plus'></i></a>
+
+                        <a href=""><i class='bx bxs-cart'></i></a>
+                        
+                        <label for="checkMenu" class='bx bx-menu'></label>
+
+                    </div>
+                </nav>
+                <nav class="menu">
+                    <input type="checkbox" name="" id="checkMenu" hidden>
+                    <ul class="main-menu">
+                        <li class="close-x"><label for="checkMenu" class="bx bx-x"></label></li>
+                        <li class="item"><a href="">Deals</a></li>
+                        <li class="item">
+                            <a >Food <i class='bx bx-chevron-down'></i></a>
+                            <ul class="sub-menu">
+                                <li class="sub-item"><a href="">Vegetables</a></li>
+                                <li class="sub-item"><a href="">Fruit</a></li>
+                                <li class="sub-item"><a href="">Meat & Poultry</a></li>
+                                <li class="sub-item"><a href="">Dairy & Eggs</a></li>
+                                <li class="sub-item"><a href="">Cereals & Snacks</a></li>
+                            </ul>
+                        </li>
+                        <li class="item">
+                            <a >Beverages <i class='bx bx-chevron-down'></i></a>
+                            <ul class="sub-menu">
+                                <li class="sub-item"><a href="">Tea</a></li>
+                                <li class="sub-item"><a href="">Coffee</a></li>
+                                <li class="sub-item"><a href="">Soft Drinks</a></li>
+                                <li class="sub-item"><a href="">Beer</a></li>
+                            </ul>
+                        </li>
+                        <li class="item">
+                            <a >Household <i class='bx bx-chevron-down'></i></a>
+                            <ul class="sub-menu">
+                                <li class="sub-item"><a href="">Home & Kitchen</a></li>
+                                <li class="sub-item"><a href="">Cleaning Supplies</a></li>
+                            </ul>
+                        </li>
+                        <li class="item">
+                            <a >Personal Care <i class='bx bx-chevron-down'></i></a>
+                            <ul class="sub-menu">
+                                <li class="sub-item"><a href="">Personal Hygiene</a></li>
+                                <li class="sub-item"><a href="">Babies</a></li>
+                            </ul>
+                        </li>
+                        <li class="item"><a href="">Most Popular</a></li>
+                        <li class="item"><a href="">My Orders</a></li>
+                        <li class="item singIn"><a href="signIn.html">Sign In</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <!-- banner -->
+                <div class="bgVideo">
+                    <video autoplay loop muted
+                        src="https://media.istockphoto.com/videos/burst-of-strawberry-raspberry-blueberry-in-white-background-with-video-id1311933735"></video>
+                    <div class="sub-bgVideo">
+                        <span class="sub-title1">Easy, Fresh & Convenient
+                        </span>
+                        <p class="main-title">Stock Up on Daily Essentials</p>
+                        <span class="sub-title2">Save Big on Your Favorite Brands</span>
+                        <a href="" class="btn">Shop Now</a>
+                    </div>
                 </div>
-                <div class="banner-right">
-                    <div class="box-parent">
-                        <div class="box-child">
-                            <img src="src/img/photo-satisfied-woman-holds-piece-pizza-feels-pleased-as-spends-free-time-with-friends-pizzeria-looks-happily-directly-wears-casual-outfit-isolated-yellow-wall-lunch-removebg 1.png"
-                                alt="">
+                <!-- end banner -->
+
+                <!-- Best Deals -->
+                <div class="slider-product-best">
+                    <p class="slider-title">Best Deals</p>
+                    <div class="frame-slider">
+                        <i class='bx bx-chevron-left'></i>
+
+                        <div class="main-slider-best">
+                            <!-- javascrip đổ dữ liệu -->
+                        </div>
+
+                        <i class='bx bx-chevron-right'></i>
+                    </div>
+
+                    <button class="btn-shop-best">Shop Best Deals</button>
+                </div>
+                <!-- end Best Deals -->
+
+                <!-- sub banner -->
+                <div class="sub-banner">
+                    <div class="banner-left">
+                        <img src="src/img/bgLert.webp" alt="">
+                        <div class="content-banner-left">
+                            <p class="title-left-1">It’s Wine O'Clock!</p>
+                            <p class="title-left-2">Great Deals on</p>
+                            <p class="title-left-3">Selected Wines</p>
+                            <p class="title-left-4">I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.</p>
+                            <a href="">Shop Now</a>
+                        </div>
+                    </div>
+                    <div class="banner-reight">
+                        <img src="src/img/bgRight.webp" alt="">
+                        <div class="content-banner-right">
+                            <p class="title-right-1">Deal of the Week</p>
+                            <p class="title-right-2">40% <sup>off</sup></p>
+                            <p class="title-right-3">Cleaning Supplies</p>
+                            <a href="">Shop Now</a>
                         </div>
                     </div>
                 </div>
-            </div>
+                <!-- end sub banner -->
 
-            <div class="list-product">
-                <div class="title-product">
-                    <h1>Our Popular Dishes</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqut enim ad minim </p>
+
+                <!-- Categories -->
+                <div class="categories">
+                    <p class="title-categories">Most Popular Categories</p>
+                    <div class="main-categories">
+                        <!-- javscrip đổ dữ liệu -->
+                    </div>
                 </div>
+                <!-- end Categories -->
 
-                <select name="" id="select-price">
-                    <option value="">Price selection</option>
-                    <option value="1">All</option>
-                    <option value="2">More than 30 $</option>
-                    <option value="3">Less than 30 $</option>
-                </select>
 
-                <div class="main-product">
+                <!-- bg sub footer -->
+
+                <div class="sub-footer-bg">
+                    <img src="src/img/bgSubfooter.webp" alt="">
+                    <div class="content-bg">
+                        <span class="subscribe">Subscribe & Save
+                        </span>
+                        <p class="">20% <sup>off</sup> </p>
+                        <span class="order">Your Next Order</span>
+                        <form action="">
+                            <label for="emailUser">Enter your email here *</label>
+                            <input type="text" name="" id="emailUser">
+                            <input type="submit" value="Subscribe">
+                        </form>
+                    </div>
                 </div>
-            </div>
-
-            <div class="categories">
-                <div class="title-btn">
-                    <p>Categories</p>
-                    <button>View All Categories</button>
-                </div>
-                <div class="box-items">
-                    
-                </div>
-
-            </div>
-            <div class="contact">
-                <p>Contact us</p>
-                <form action="">
-
-                    <div class="form-left">
-                        <label for="">Name</label><br>
-                        <input type="text" name="" id="" placeholder="Enter your name..." required>
-                        <br><label for="">Subject</label><br>
-                        <input type="text" name="" id="" placeholder="Enter subject..." required> 
+                 <!-- end bg sub footer -->
+            </main>
+            <footer id="hello">
+                <div class="main-footer">
+                    <div class="footer-colum">
+                        <a href="" class="log-footer">Clovers.</a>
+                        <p class="help">Need Help?</p>
+                        <p class="customer">Visit our <a href="">Customer Support</a> for assistance or call us at</p>
+                        <span class="call">+846-993-5501</span>
+                        <div class="footer-info">
+                            <a href=""><i class='bx bxl-facebook'></i></a>
+                            <a href=""><i class='bx bxl-youtube'></i></a>
+                            <a href=""><i class='bx bxl-instagram'></i></a>
+                        </div>
                     </div>
 
-                    <div class="form-right">
-                        <label for="">emAIL aDDRESS</label><br>
-                        <input type="email" name="" id="" placeholder="Your email address..." required>
-                        <br><label for="">ENquiry type</label><br>
-                        <select name="" id="" required>
-                            <option value="">Advertising</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                        </select>
+                    <div class="footer-colum">
+                        <p class="title-end">
+                            Menu</p>
+                        <nav class="menu-footer">
+                            <ul>
+                                <li><a href="">Deals</a></li>
+                                <li><a href="">Food</a></li>
+                                <li><a href="">Beverages</a></li>
+                                <li><a href="">Household</a></li>
+                                <li><a href="">Personal Care</a></li>
+                                <li><a href="">Most Popular</a></li>
+                                <li><a href="">My Orders</a></li>
+                            </ul>
+                        </nav>
                     </div>
-                    <div class="form-bottom">
-                        <br><label for="">MEssages</label><br>
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Enter your messages..."></textarea>
-                        <input type="submit" value="Submit" name="" id="">
+                    <div class="footer-colum">
+                        <p class="title-end">
+                            Categories</p>
+                        <nav class="menu-footer">
+                            <ul>
+                                <li><a href="">Vegetables</a></li>
+                                <li><a href="">Bakery</a></li>
+                                <li><a href="">Wine</a></li>
+                                <li><a href="">Dairy & Eggs</a></li>
+                                <li><a href="">Meat & Poultry</a></li>
+                                <li><a href="">Soft Drinks</a></li>
+                                <li><a href="">Cleaning Supplies</a></li>
+                                <li><a href="">Cereal & Snacks</a></li>
+                            </ul>
+                        </nav>
                     </div>
+                    <div class="footer-colum">
+                        <p class="title-end">
+                            Info</p>
+                        <nav class="menu-footer">
+                            <ul>
+                                <li><a href="">FAQ</a></li>
+                                <li><a href="">About Us</a></li>
+                                <li><a href="">Customer Support</a></li>
+                                <li><a href="">Locations</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer-colum">
+                        <p class="title-end">
+                            My Choice</p>
+                        <nav class="menu-footer">
+                            <ul>
+                                <li><a href="">Favorites</a></li>
+                                <li><a href="">My Orders</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="sub-footer">
+                    <div class="banking">
+                        <p class="title-banking">We accept the following payment methods</p>
+                        <div class="box-logo-bank">
+                            <img src="src/img/footer1.webp" alt="">
+                            <img src="src/img/footer2.webp" alt="">
+                            <img src="src/img/footer3.webp" alt="">
+                            <img src="src/img/footer4.webp" alt="">
+                            <img src="src/img/footer5.webp" alt="">
+                            <img src="src/img/footer6.webp" alt="">
+                            <img src="src/img/footer7.webp" alt="">
+                            <img src="src/img/footer8.webp" alt="">
+                        </div>
+                    </div>
+                </div>
 
-                </form>
-            </div>
-        </main>
-        <footer>
-            <img src="src/img/Fudo..png" alt="">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Products</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Contact Us</a></li>
-            </ul>
-
-        </footer>
-    </div>
-    <script src="./src/js/main.js"></script>
+                <div class="author">
+                    <p>© 2022 by Clovers. Proudly created with <a href="">Anh Duong</a></p>
+                </div>
+            </footer>
+        </div>
+        <script src="src/js/main.js"></script>
 </body>
 
 </html>

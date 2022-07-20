@@ -1,373 +1,374 @@
-const ListProduct = [
+// dữ liệu 
+
+var productList = [
     {
-        id: 1,
-        name: "Big and Juicy Wagyu Beef Cheeseburger",
-        price: 30,
-        desc: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
-        image: "src/img/image 26.png",
-        category: 4
+        'id': 1,
+        'name': 'Hand Cream',
+        'avatar': 'https://static.wixstatic.com/media/c837a6_b8785d0e4dbe4a1f8fe00c6c36e25422~mv2.jpg/v1/fill/w_252,h_252,al_c,q_80,usm_0.66_1.00_0.01/c837a6_b8785d0e4dbe4a1f8fe00c6c36e25422~mv2.webp',
+        'desc': "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item. Buyers like to know what they’re getting before they purchase, so give them as much information as possible so they can buy with confidence and certainty.",
+        'price': 2,
+        'categoriesId': 1
+    },
+
+    {
+        'id': 2,
+        'name': 'Herbal Tea 16 ct.',
+        'avatar': 'https://static.wixstatic.com/media/c837a6_260c0b2e4a224901b112978a8a2c1c6e~mv2.jpg/v1/fill/w_252,h_252,al_c,q_80,usm_0.66_1.00_0.01/c837a6_260c0b2e4a224901b112978a8a2c1c6e~mv2.webp',
+        'desc': "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item. Buyers like to know what they’re getting before they purchase, so give them as much information as possible so they can buy with confidence and certainty.",
+        'price': 5,
+        'categoriesId': 1
+    },
+
+    {
+        'id': 3,
+        'name': 'Strawberries - 1lb',
+        'avatar': 'https://static.wixstatic.com/media/c837a6_7f6d45dc2b004e88ac1f4eee127ff332~mv2.jpg/v1/fill/w_252,h_252,al_c,q_80,usm_0.66_1.00_0.01/c837a6_7f6d45dc2b004e88ac1f4eee127ff332~mv2.webp',
+        'desc': "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item. Buyers like to know what they’re getting before they purchase, so give them as much information as possible so they can buy with confidence and certainty.",
+        'price': 3,
+        'categoriesId': 1
+    },
+
+    {
+        'id': 4,
+        'name': 'Hass Avocados, Ready-to-Eat - 1lb',
+        'avatar': 'https://static.wixstatic.com/media/c837a6_b5b9284a44384c8dbce0bc27bad2dda4~mv2.jpg/v1/fill/w_252,h_252,al_c,q_80,usm_0.66_1.00_0.01/c837a6_b5b9284a44384c8dbce0bc27bad2dda4~mv2.webp',
+        'desc': "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item. Buyers like to know what they’re getting before they purchase, so give them as much information as possible so they can buy with confidence and certainty.",
+        'price': 9,
+        'categoriesId': 1
+    },
+
+    {
+        'id': 5,
+        'name': 'Tuna Steak Fillet - 1lb',
+        'avatar': 'https://static.wixstatic.com/media/c837a6_58835d9ae93f4c43af863ba0e76ae2a0~mv2.jpg/v1/fill/w_207,h_207,al_c,q_80,usm_0.66_1.00_0.01/c837a6_58835d9ae93f4c43af863ba0e76ae2a0~mv2.webp',
+        'desc': "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item. Buyers like to know what they’re getting before they purchase, so give them as much information as possible so they can buy with confidence and certainty.",
+        'price': 1,
+        'categoriesId': 1
+    },
+
+    {
+        'id': 6,
+        'name': 'Cream Cheese Spread 8 oz.',
+        'avatar': 'https://static.wixstatic.com/media/c837a6_cc314d70076e442fadd82ce2e39758a1~mv2.jpg/v1/fill/w_207,h_207,al_c,q_80,usm_0.66_1.00_0.01/c837a6_cc314d70076e442fadd82ce2e39758a1~mv2.webp',
+        'desc': "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item. Buyers like to know what they’re getting before they purchase, so give them as much information as possible so they can buy with confidence and certainty.",
+        'price': 2.99,
+        'categoriesId': 1
+    },
+
+    {
+        'id': 7,
+        'name': 'Thin Spaghetti.',
+        'avatar': 'https://static.wixstatic.com/media/c837a6_568af83ef77c4945aa44dd71cafbeb22~mv2.jpg/v1/fill/w_207,h_207,al_c,q_80,usm_0.66_1.00_0.01/c837a6_568af83ef77c4945aa44dd71cafbeb22~mv2.webp',
+        'desc': "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item. Buyers like to know what they’re getting before they purchase, so give them as much information as possible so they can buy with confidence and certainty.",
+        'price': 4.5,
+        'categoriesId': 1
+    },
+
+    {
+        'id': 8,
+        'name': 'Oats and Honey Granola Cereal.',
+        'avatar': 'https://static.wixstatic.com/media/c837a6_2dde4d0405d34e2497319ee16a9a096d~mv2.jpg/v1/fill/w_207,h_207,al_c,q_80,usm_0.66_1.00_0.01/c837a6_2dde4d0405d34e2497319ee16a9a096d~mv2.webp',
+        'desc': "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item. Buyers like to know what they’re getting before they purchase, so give them as much information as possible so they can buy with confidence and certainty.",
+        'price': 8,
+        'categoriesId': 1
+    },
+
+    {
+        'id': 9,
+        'name': 'Decaffeinated Instant Coffee',
+        'avatar': 'https://static.wixstatic.com/media/c837a6_a3f22d6f9d5740d4ba7e81fdcb2dad1c~mv2.jpg/v1/fill/w_207,h_207,al_c,q_80,usm_0.66_1.00_0.01/c837a6_a3f22d6f9d5740d4ba7e81fdcb2dad1c~mv2.webp',
+        'desc': "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item. Buyers like to know what they’re getting before they purchase, so give them as much information as possible so they can buy with confidence and certainty.",
+        'price': 8,
+        'categoriesId': 1
     },
     {
-        id: 2,
-        name: "Fresh Lime Roasted Salmon",
-        price: 10,
-        desc: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
-        image: "src/img/image 26 (1).png",
-        category: 1
+        'id': 10,
+        'name': 'Brown Ale Glass Bottle 16 oz.',
+        'avatar': 'https://static.wixstatic.com/media/c837a6_2bd65ba805394358838d82695f3b92e1~mv2.jpg/v1/fill/w_207,h_207,al_c,q_80,usm_0.66_1.00_0.01/c837a6_2bd65ba805394358838d82695f3b92e1~mv2.webp',
+        'desc': "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item. Buyers like to know what they’re getting before they purchase, so give them as much information as possible so they can buy with confidence and certainty.",
+        'price': 8,
+        'categoriesId': 1
+    },
+
+    {
+        'id': 10,
+        'name': 'Brown Ale Glass Bottle 16 oz.',
+        'avatar': 'https://static.wixstatic.com/media/c837a6_2bd65ba805394358838d82695f3b92e1~mv2.jpg/v1/fill/w_207,h_207,al_c,q_80,usm_0.66_1.00_0.01/c837a6_2bd65ba805394358838d82695f3b92e1~mv2.webp',
+        'desc': "I'm a product detail. I'm a great place to add more information about your product such as sizing, material, care and cleaning instructions. This is also a great space to write what makes this product special and how your customers can benefit from this item. Buyers like to know what they’re getting before they purchase, so give them as much information as possible so they can buy with confidence and certainty.",
+        'price': 8,
+        'categoriesId': 1
+    },
+
+    
+];
+var categoriesList = [
+    {
+        'id': 1,
+        'categoriesName': 'Vegetables',
+        'img': 'https://static.wixstatic.com/media/c837a6_54f3e8f5b6ed4a6a92a3e7e72c45c6c0~mv2.png/v1/fill/w_338,h_299,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/shutterstock_99478112_2.png'
     },
     {
-        id: 3,
-        name: "The Best Easy One Pot Chicken and Rice",
-        price: 20,
-        desc: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
-        image: "src/img/image 26 (2).png",
-        category: 2
+        'id': 2,
+        'categoriesName': 'Bakery',
+        'img': 'https://static.wixstatic.com/media/c837a6_27969dc29ca74784bdcda6dfb7f8e8f5~mv2.png/v1/fill/w_386,h_248,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/shutterstock_1485281813.png'
     },
     {
-        id: 4,
-        name: "Fresh and Healthy Mixed Mayonnaise ",
-        price: 50,
-        desc: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
-        image: "src/img/image 26 (3).png",
-        category: 4
+        'id': 3,
+        'categoriesName': 'Wine',
+        'img': 'https://static.wixstatic.com/media/c837a6_24bc47c82c4e44c496b517fad1b91a80~mv2.png/v1/fill/w_284,h_384,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/B_009_3.png'
     },
     {
-        id: 5,
-        name: "The Creamiest Creamy Chicken",
-        price: 60,
-        desc: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
-        image: "src/img/image 26 (4).png",
-        category: 5
+        'id': 4,
+        'categoriesName': 'Dairy & Eggs',
+        'img': 'https://static.wixstatic.com/media/c837a6_f5efa954aaab4579816a29703d8ab59f~mv2.png/v1/fill/w_354,h_299,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/shutterstock_136358678.png'
     },
     {
-        id: 6,
-        name: "Fruity Pancake with Orange & Blueberry",
-        price: 15,
-        desc: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
-        image: "src/img/image 26 (5).png",
-        category: 6
-    }
-]
-const ListCategory = [
-    {
-        id: 1,
-        name: "Meat",
-        image: "src/img/image 21.png"
+        'id': 5,
+        'categoriesName': 'Meat & Poultry',
+        'img': 'https://static.wixstatic.com/media/c837a6_c91b032b1ce6483ca30e14bea694fac9~mv2.png/v1/fill/w_353,h_257,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/shutterstock_1383180032_2.png'
     },
     {
-        id: 2,
-        name: "Dessert",
-        image: "src/img/image 22.png"
+        'id': 6,
+        'categoriesName': 'Soft Drinks',
+        'img': 'https://static.wixstatic.com/media/c837a6_78211f5f45854b4dbbb99c5779e8fc6e~mv2.png/v1/fill/w_279,h_399,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/shutterstock_1434271904_4.png'
     },
     {
-        id: 3,
-        name: "Lunch",
-        image: "src/img/image 23.png"
+        'id': 7,
+        'categoriesName': 'Cleaning Supplies',
+        'img': 'https://static.wixstatic.com/media/c837a6_9ea4c59481ae46049411e798469725b8~mv2.png/v1/fill/w_297,h_318,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/shutterstock_123544366.png'
     },
     {
-        id: 4,
-        name: "Chocolate",
-        image: "src/img/image 24.png"
+        'id': 8,
+        'categoriesName': 'Cereal & Snacks',
+        'img': 'https://static.wixstatic.com/media/c837a6_467f29f6d4ef4fdf8897910dec40537a~mv2.png/v1/fill/w_300,h_341,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Korn_Flakes_2.png'
     },
-    {
-        id: 5,
-        name: "Vegan",
-        image: "src/img/image 20 (1).png"
-    },
-    {
-        id: 6,
-        name: "Breakfast",
-        image: "src/img/image 25.png"
-    }
+
 ];
 
-const ListBlogNews = [
-    {
-        id: 1,
-        title: "GitHub là gì? Cách chia sẻ mã nguồn, tải code dễ dàng",
-        subTitle: "GitHub là dịch vụ server quản lý nhiều phiên bản code, giúp lưu trữ chúng và cả nội dung dự án của hai hay nhiều tài khoản của lập trình viên.....",
-        img: "./src/img/github-la-gi.jpg",
-        content: "GitHub được sử dụng chủ yếu cho dự án có nhiều người cùng hợp tác và cần giám sát toàn bộ thay đổi của dự án. Bên cạnh đó, GitHub còn có khả năng khôi phục code khi cần thiết. Khi sử dụng GitHub, ngoài các công việc chính như tạo Branch, tạo Pull Request và Fork một Repository, bạn có thể theo dõi, tương tác với người khác như một mạng xã hội thông thường.",
-        BlogCategoryId: 1
-    },
-    {
-        id: 2,
-        title: "Vị tướng thứ 158 của LMHT: Zeri – Tia chớp thành Zaun",
-        subTitle: "Trong thông báo đầu tiên của năm 2022, Riot Games đã bất ngờ đem đến một niềm vui cho người hâm mộ thông qua việc nâng cấp.....",
-        img: "./src/img/tuong-moi-lmht-zeri-1-696x391.jpg",
-        content: "Trong thông báo đầu tiên của năm 2022, Riot Games đã bất ngờ đem đến một niềm vui cho người hâm mộ thông qua việc nâng cấp một số chi tiết trong LMHT. Và thay đổi lớn nhất được nhiều người chơi chắc chắn là sự xuất hiện của tướng mới Zeri.Đại diện hãng game cho biết: “Chúng tôi muốn giới thiệu một Xạ Thủ mới linh hoạt trong di chuyển, có tốc độ chơi với tốc độ của súng máy và mang lại cảm giác như một game bắn súng.” Theo đó, Zeri sẽ là một Xạ Thủ khủng, vượt tầm cả Ezreal. Đây là vị tướng thứ 158 được giới thiệu trong LMHT.",
-        BlogCategoryId: 2
-    },
-    {
-        id: 3,
-        title: "Chi tiết bộ kỹ năng của tướng Yue trong Liên Quân Mobile",
-        subTitle: "Thông số kỹ năng của Yue Ngọc Phiến Công Chúa - vị tướng mới được ra mắt trong bản cập nhật ......",
-        img: "./src/img/gt8mee8-122540.png",
-        content: "Chiêu 1 - Cắt Giang Sơn,Chiêu 2 - Trảm Thiên ĐịaChiêu 3 - Đạo Quân Vương.Yue là công chúa thứ 10 trong hoàng tộc Vương Quốc Rồng. Ngoài dung mạo xinh đẹp, Yue còn có trí tuệ và năng lực tuyệt đỉnh. Trong video giới thiệu phiên bản Trung Quốc, Yue có vẻ như là bạn bè và có chút liên quan tới Qi - cô nàng Võ Sư Bánh Bao.",
-        BlogCategoryId: 2
-    },
 
 
-
-];
-
-const BlogCategory = [
-    {
-        id: 1,
-        name: "GitHub"
-    },
-    {
-        id: 2,
-        name: "Game"
-    },
-];
-
-
-function showProduct(items) {
-    let product = document.querySelector('.main-product');
-    if (product) {
-        product.innerHTML = "";
-        for (let i of items) {
-            product.innerHTML += `
-            <div class="box-product" >
-            <a href="./detail.html?id=${i.id}">
-                <div class="img-product">
-                    <img src="${i.image}"  alt="">
-                </div>
-            </a>
-            <div class="infor-product">
-                <a href="./detail.html?id=${i.id}">${i.name}</a>
-                <div class="time-type">
-                    <div class="time">
-                        <img src="src/img/Vector.png" alt="">
-                        <p>30 Minutes</p>
-                    </div>
-                <div class="type">
-                    <img src="src/img/Vector (1).png" alt="">
-                    <img src="src/img/Vector (2).png" alt="">
-                    <p>Snack</p>
-                </div>
-            </div>
-            </div>
-        </div>
-        `;
-        }
-    }
-
+// kết thúc animation loading
+var container = document.querySelector('.container');
+var loading = document.querySelector('.loading');
+if (loading) {
+    setTimeout(function () {
+        loading.style.opacity = '0';
+        loading.style.zIndex = '-100';
+    }, 2000);
 }
-showProduct(ListProduct);
 
-function List() {
-    let items = document.querySelector('.box-items');
-    if (items) {
-        for (let i of ListCategory) {
-            items.innerHTML += `
-                    <div class="items">
-                        <img src="${i.image}" alt="">
-                        <p>${i.name}</p>
+
+// duyệt mảng rproduct hiển thị sản phẩm
+
+var boxProduct = document.querySelector('.main-slider-best');
+if(boxProduct){
+    function displayProduct(){
+        for(let item of productList){
+            boxProduct.innerHTML +=`
+                    <div class="product">
+                    <a href="detail.html?id=${item.id}" class="avatar-product">
+                        <img src="${item.avatar}" alt="">
+                    </a>
+                    <a href="" class="name-price">
+                        <span class="name-product">${item.name}</span>
+                        <span class="price-product">$${item.price}</span>
+                    </a>
+                    <div class="add-cart">
+                        <form action="">
+                            <div class="minus">-</div>
+                            <input type="text" value="1" class="numberProduct">
+                            <div class="add">+</div>
+                        </form>
+                        <div class="btn-add-cart">Add to Cart</div>
                     </div>
-        `;
+                    </div>
+            `;
         }
     }
-};
+    displayProduct();
+}
 
-List();
-let price = document.querySelector('#select-price');
-function priceSelection() {
+// slider sản phẩm
+var next = document.querySelector('.bx-chevron-right');
+var back = document.querySelector('.bx-chevron-left');
+var productSlider = document.querySelectorAll('.product');
+var widthSlide = document.querySelector('.main-slider-best');
+if (next) {
+    var responsive = container.getClientRects()[0];
+    var widthMain = widthSlide.getClientRects()[0];
+    if(responsive.width > 1024){
+        var px = ((widthMain.width) / 100) * 20;
+    }else if(responsive.width > 740){
+        var px = ((widthMain.width) / 100) * 25;
+    }else{
+        var px = ((widthMain.width) / 100) * 100;
+    }
+    
+    var count = 0;
+    var countRun = 0;
+    function sliderNext() {
+        
+        console.log(countRun);
+        if (countRun == productList.length-5 && responsive.width > 1024) {
+            return;
+        } else if (countRun == productList.length-4 && responsive.width > 740) {
+            return;
+        } else if (countRun == productList.length-1) {
+            return;
+        }
+        count += px;
+        for (let i of productSlider) {
+            i.style.transform = 'translateX(' + -count + 'px)';
+        }
+        countRun++;
+    }
 
-    // cách 1 dùng vòng lặp
-    let over30 = [];
-    let cunder30 = [];
-    for (let i of ListProduct) {
-        if (i.price >= 30) {
-            over30.push(i);
+    function sliderBack() {
+        if (countRun == 0 && responsive.width > 1024) {
+            return;
+        } else if (countRun == 0 && responsive.width > 740) {
+            return;
+        } else if (countRun == 0) {
+            return;
+        }
+        count -= px;
+        for (let i of productSlider) {
+            i.style.transform = 'translateX(' + -count + 'px)';
+        }
+        countRun--;
+    }
+    next.addEventListener('click', sliderNext);
+    back.addEventListener('click', sliderBack);
+}
+
+// thêm số lượng sản phẩm + tiền khi thêm sản phẩm
+
+var add = document.querySelectorAll('.add');
+var minus = document.querySelectorAll('.minus');
+var numberProduct = document.querySelectorAll('.numberProduct');
+var priceProduct = document.querySelectorAll('.price-product');
+if (add) {
+    var arrPrice = [];
+    for (var i = 0; i < add.length; i++) {
+        var gia = priceProduct[i].innerText.slice(1);
+        arrPrice.push(gia);
+    }
+    for (let i in add) {
+        add[i].onclick = function () {
+            numberProduct[i].value++;
+            priceProduct[i].innerText = "$" + Math.round((numberProduct[i].value) * arrPrice[i]);
+        };
+        minus[i].onclick = function () {
+            if (numberProduct[i].value < 1) {
+                numberProduct[i].value = 1;
+            }
+            numberProduct[i].value--;
+            priceProduct[i].innerText = "$" + Math.round((numberProduct[i].value) * arrPrice[i]);
+        };
+    }
+}
+
+// sử lý onscroll bg sub footer
+/* transform: translateX(-10%); */
+var bg = document.querySelector('.sub-footer-bg>img');
+if (bg) {
+    var z = 0;
+    function animationBg() {
+
+        var x = bg.getClientRects()[0];
+        if (x.top < 100) {
+            if (z <= 200) {
+                bg.style.transform = 'translateX(-' + z + 'px)';
+                z += 20;
+                console.log("hihi");
+            }
         } else {
-            cunder30.push(i);
+            if (z >= 0) {
+                bg.style.transform = 'translateX(-' + z + 'px)';
+                z -= 20;
+            }
         }
     }
-
-    // cách 2 dùng filter
-    // let over30 = ListProduct.filter(function(x) {
-    //     return x.price >= 30;
-    // });
-    // let cunder30 = ListProduct.filter(function(x) {
-    //     return x.price < 30;
-    // });
-
-
-    if (price.value == "2") {
-        showProduct(over30);
-    }
-
-
-    if (price.value == "3") {
-        showProduct(cunder30);
-    }
-
-    if (price.value == "1") {
-        showProduct(ListProduct);
-    }
-}
-if (price) {
-    price.addEventListener("change", priceSelection);
+    window.addEventListener('scroll', animationBg);
 }
 
-function detailProduct() {
-    const prdId = new URLSearchParams(window.location.search).get('id');
-    if (prdId) {
-        const productDetail = ListProduct.find(function (item) {
-            return item.id == prdId
-        })
-        const detailProductDiv = document.querySelector('.product-detail')
-        detailProductDiv.innerHTML = `
-        <div class="product-detail-left">
-            <h1>${productDetail.name}</h1>
-            <span>$${productDetail.price}</span>
-            <p>${productDetail.desc}</p>
+// duyệt mảng hiển thị categories
 
-            <form action="">
-                <input type="text" name="" id="quantity" placeholder="Quantity" required>
-                <input  onclick="addCart()" type="button" value="Add To Cart" name="" id="submit">
-            </form>
-        </div>
-        <div class="product-detail-right">
-            <img src="${productDetail.image}" alt="">
-        </div>
-        `
-    }
-}
-detailProduct();
-
-
-function ProductPage() {
-    var ListCategoryPage = document.querySelector('.top>ul');
-    if (ListCategoryPage) {
-        for (let i of ListCategory) {
-            ListCategoryPage.innerHTML += `
-                            <li><a onclick="reRender(${i.id})">${i.name}</a></li>
-                        `;
-        }
-    }
-}
-ProductPage();
-function CategoryPage(q) {
-    var boxProduct = document.querySelectorAll('.box8');
-    if (boxProduct[0]) {
-        for (let i in q) {
-            boxProduct[i].innerHTML += `
-            <img src="${q[i].image}" alt="">
-            <p>${q[i].name}</p>
-            <span>$${q[i].price}</span>
-            <button>Add To Cart</button>
+var mainCategories = document.querySelector('.main-categories');
+if (mainCategories) {
+    function displayCategories() {
+        for (let item of categoriesList) {
+            mainCategories.innerHTML += `
+                    <div class="box-categories">
+                        <div class="categories-img">
+                            <img src="${item.img}" alt="">
+                        </div>
+                        <p class="categories-name">
+                            ${item.categoriesName}
+                        </p>
+                    </div>
             `;
         }
     }
+    displayCategories();
 }
 
-CategoryPage(ListProduct);
 
-function reRender(cateId) {
-    var boxProduct = document.querySelectorAll('.box8');
-    const filterCategory = ListProduct.filter(function (item) {
-        return item.category == cateId
-    });
-
-    if (boxProduct) {
-        for (let i in ListProduct) {
-            boxProduct[i].innerHTML = ``;
-        }
-        for (let i in filterCategory) {
-            boxProduct[i].innerHTML = `
-            <img src="${filterCategory[i].image}" alt="">
-            <p>${filterCategory[i].name}</p>
-            <span>$${filterCategory[i].price}</span>
-            <button>Add To Cart</button>
-            `;
-        }
-    }
-
-};
-
-
-// cart
-
-// let arrCart = [];
-// function addCart() {
-//     var name = document.querySelector('.product-detail-left>h1');
-//     var price = document.querySelector('.product-detail-left>span');
-//     var quantity = document.querySelector('#quantity');
-//     var image = document.querySelector('.product-detail-right>img');
-//     var cart = document.querySelector('#cart');
-//     arrCart.push({
-//         nameCart: `${name.innerText}`,
-//         priceCart: `${price.innerText}`,
-//         quantityCart: `${quantity.value}`,
-//         imageCart: `${image.src}`
-//     });
-//     // console.log(arrCart);
-//     localStorage.setItem('objectCart',JSON.stringify(arrCart));
-//     console.log(localStorage.getItem('objectCart'));
-//     if (arrCart.length > 0) {
-//         for (let i of arrCart) {
-//             if (cart) {
-//                 cart.innerHTML += `
-//             <tr>
-//                 <td>${localStorage.getItem('objectCart')}</td>
-//                 <td>${localStorage.getItem('objectCart')}</td>
-//                 <td>${localStorage.getItem('objectCart')}</td>
-//                 <td>${localStorage.getItem('objectCart')}</td>
-//             </tr>
-//         `;
-//             }
-//         }
-//     }
-// }
-
-// validate from
-
+// validate form
 var signUp = document.querySelector('#submit-signUp');
 var signIn = document.querySelector('#submit-signIn');
 function checkFrom() {
+    var countErro = 0;
     let name = document.querySelector('#name');
     let email = document.querySelector('#email');
     let pass = document.querySelector('#password');
     let rePass = document.querySelector('#re-password');
     let span = document.querySelectorAll('span');
-
     if (signUp) {
         if (name.value.length == 0) {
             span[2].innerText = "Vui lòng nhập tên.";
+            countErro++;
         } else {
             span[2].innerText = "";
         }
         if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value))) {
             span[1].innerText = "Email không hợp lệ.";
+            countErro++;
         } else {
             span[1].innerText = "";
         }
         if (pass.value.length == 0) {
             span[3].innerText = "Vui lòng nhập password.";
+            countErro++;
         } else {
             span[3].innerText = "";
         }
         if (rePass.value != pass.value) {
             span[4].innerText = "Mật Khẩu không Khớp.";
+            countErro++;
         } else {
             span[4].innerText = "";
         }
-    } else {
+        if (countErro == 0) {
+            swal("Sent", "Sign Up Success.", "success");
+        }
+    } else if (signIn) {
         if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value))) {
             span[1].innerText = "Email không hợp lệ.";
+            countErro++;
         } else {
             span[1].innerText = "";
         }
         if (pass.value.length == 0) {
             span[2].innerText = "Vui lòng nhập password.";
+            countErro++;
         } else {
             span[2].innerText = "";
         }
-    }
-
+        if (countErro == 0) {
+            swal("Sent", "Logged in successfully.", "success");
+        }
+    } 
 }
 if (signUp) {
     signUp.addEventListener('click', checkFrom);
@@ -377,116 +378,43 @@ if (signIn) {
     signIn.addEventListener('click', checkFrom);
 }
 
-// blog
 
-let news = document.querySelector('.news');
-function displayBlogNews(items) {
-    if (news) {
-        news.innerHTML = ``;
-        for (let i of items) {
-            news.innerHTML += `
-        <div class="box-news">
-        <div class="newImg">
-            <img onclick="displayNews(${i.id})" src="${i.img}" alt="">
-        </div>
-        <div class="infoUser">
-            <img src="src/img/img-11.png" alt="">
-            <div class="nameUser">
-                <p>Anh Duong</p>
-                <span>Dec 9, 2021</span>
-            </div>
-        </div>
-        <div class="title-new">
-            <a onclick="displayNews(${i.id})">${i.title}</a>
-            <p>${i.subTitle}</p>
-        </div>
-        <div class="views-heart">
-            <p>100 viwes</p>
-            <span><i class='bx bxs-heart' onclick="heartClick(this)"></i></span>
-        </div>
-    </div>
-        `;
+// detail product 
+var mainDetail = document.querySelector('.detail-product');
+if(mainDetail){
+    var idProduct = new URLSearchParams(window.location.search).get('id');
+    function detailDisplay(){
+        for(let i of productList){
+            if(i.id == idProduct){
+                var idDetail = i;
+            }
         }
-    }
-}
-if (news) { displayBlogNews(ListBlogNews); }
-let overlay = document.querySelector('.main-blog>.overlay');
-let newsDetails = document.querySelector('.news-details');
-function displayNews(items) {
-    if (newsDetails) {
-        newsDetails.style.display ='block';
-        newsDetails.style.zIndex = '20'
-        overlay.style.display = "block";
-        var filter = ListBlogNews.find(function (i) {
-            return i.id == items;
-        })
-        newsDetails.innerHTML = `
-        <div class="icon-close">
-        <i onclick="closeNews()" class='bx bx-x'></i>
-    </div>
-    <div class="body-News">
-        <div class="infoUser-1">
-            <div class="box-user">
-                <div class="avatar">
-                    <img src="src/img/img-11.png" alt="">
-                </div>
-
-                <div class="user">
-                    <p>Anh Duong</p>
-                    <span>Dec 9, 2021</span>
+        mainDetail.innerHTML = `
+        <article class="detail-product">
+        <div class="detail-left">
+            <img src="${idDetail.avatar}" alt="">
+        </div>
+        <div class="detail-right">
+            <form action="">
+                <p class="detail-name">${idDetail.name}</p>
+                <span class="detail-price">$${idDetail.price}</span>
+                <label for="quantity">Quantity</label>
+                <input type="number" value="1" min="0" id="quantity">
+                <button>Add Cart</button>
+            </form>
+            <div class="detail-info">
+                <p class="desc-content">${idDetail.desc}</p>
                 </div>
             </div>
-
-            <div class="conten-news">
-                <p>${filter.title}</p>
-                <img src="${filter.img}" alt="">
-                <span>${filter.content}</span>
-            </div>
-            <div class="heart">
-                <i class='bx bxs-heart' onclick="heartClick(this)"></i>
-                <i class='bx bxs-message-dots'></i>
-            </div>
-        </div>
-    </div>
+        </article>
         `;
     }
+    detailDisplay();
 }
-function closeNews() {
-    newsDetails.style.display = 'none';
-    overlay.style.display = "none";
-}
-let slectNews = document.querySelector('#selectBlog');
-function filterNews() {
-    if (slectNews) {
 
-        let game = ListBlogNews.filter(function (i) {
-            return i.BlogCategoryId == "2";
-        });
-        let github = ListBlogNews.filter(function (i) {
-            return i.BlogCategoryId == "1";
-        });
 
-        if (slectNews.value == "") {
-            displayBlogNews(ListBlogNews);
-        }
-        if (slectNews.value == "Game") {
-            displayBlogNews(game);
-        }
-        if (slectNews.value == "GitHub") {
-            displayBlogNews(github);
-        }
-    }
 
-}
-if (slectNews) {
-    slectNews.addEventListener('change',filterNews);
-}
-let count = 0;
-function heartClick(heart){
-    if(count%2==0){
-        heart.style.color = 'red';
-    }else{
-        heart.style.color = 'black';
-    }
-    count++;
-}
+
+
+
+
